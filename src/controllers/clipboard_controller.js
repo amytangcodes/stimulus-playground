@@ -1,7 +1,17 @@
 import { Controller } from 'stimulus'
 
 export default class extends Controller {
-  copy() {
-    
+  static targets = ["source"]
+  
+  copy(e) {
+    e.preventDefault()
+    this.sourceTarget.select()
+    document.execCommand("copy")
+  }
+
+  connect() {
+    if (document.queryCommandSupported("copy")) {
+      this.element.classList.add("clipboard--supported")
+    }
   }
 }
