@@ -5,6 +5,7 @@ export default class extends Controller {
 
   greet() {
     console.log(`Hello, ${this.name}!`)
+    document.getElementsByClassName("greeting")[0].textContent = `Hello, ${this.name}!`;
   }
 
   get name() {

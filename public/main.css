@@ -2,6 +2,12 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
 }
 
+section {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid gray;
+}
+
 .clipboard-btn {
   display: none;
 }

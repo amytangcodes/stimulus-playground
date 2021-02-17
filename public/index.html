@@ -8,28 +8,43 @@
 <body>
   <h1 data-controller="example"></h1>
 
-  <div data-controller="hello">
-    <input data-hello-target="name" type="text">
+  <section data-controller="hello">
+    <input data-hello-target="name" type="text" placeholder="Your name">
     <button data-action="click->hello#greet">Greet</button>
-  </div>
+    <p class="greeting"></p>
+  </section>
 
-  <div data-controller="clipboard">
+  <section data-controller="clipboard">
     PIN: <input data-clipboard-target="source" type="text" value="1234" readonly>
 
     <button data-action="clipboard#copy">Copy to Clipboard</button>
-  </div>
+  </section>
 
-  <div data-controller="clipboard">
+  <section data-controller="clipboard">
     PIN: <input data-clipboard-target="source" type="text" value="Soup to nuts" readonly>
   
     <button data-action="clipboard#copy">Copy to Clipboard</button>
-  </div>
+  </section>
 
-  <div data-controller="clipboard">
-    <p>Browser Supported</p>
+  <section data-controller="clipboard">
+    <h2>Browser Supported</h2>
     PIN: <textarea data-clipboard-target="source" type="text" readonly>Soup to nuts</textarea>
   
     <a href="#" data-action="clipboard#copy" class="clipboard-btn">Copy to Clipboard</a>
-  </div>
+  </section>
+
+  <section>
+    <div data-controller="slideshow">
+      <button data-action="slideshow#previous"> ← </button>
+      <button data-action="slideshow#next"> → </button>
+
+      <div data-slideshow-target="slide">🐵</div>
+      <div data-slideshow-target="slide">🙈</div>
+      <div data-slideshow-target="slide">🙉</div>
+      <div data-slideshow-target="slide">🙊</div>
+    </div>
+  </section>
+
+
 </body>
 </html> 
